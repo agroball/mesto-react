@@ -27,7 +27,6 @@ function App() {
 
     React.useEffect(() => {
         const promises = [api.getUserInfo(), api.getInitialCards()];
-
         Promise.all(promises)
             .then(([user, cards]) => {
                 setCurrentUser(user);
